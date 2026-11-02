@@ -8,7 +8,9 @@ from .models import (
     Instrumentos,
     Inventario,
     Medicamentos,
-    Receta
+    Receta,
+    Doctor,
+    Usuarios
 )
 
 admin.site.register([
@@ -19,5 +21,7 @@ admin.site.register([
     Instrumentos,
     Inventario,
     Medicamentos,
-    Receta
+    Receta,
+    Doctor,
+    Usuarios
 ])
