@@ -1,0 +1,10 @@
+<!-- templates/tutor/index.html -->
+{% extends "base.html" %}
+{% block titulo %}Tutor{% endblock %}
+{% block contenido %}
+<h1>Tutor</h1>
+<ul>
+    <li><a href="{% url 'tutor_lista' %}">Ver mis tutores</a></li>
+    <li><a href="{% url 'tutor_crear' %}">Crear tutor</a></li>
+</ul>
+{% endblock %}

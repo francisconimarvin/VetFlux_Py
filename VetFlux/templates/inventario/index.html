@@ -1,0 +1,9 @@
+<!-- templates/inventario/index.html -->
+{% extends "base.html" %}
+{% block titulo %}Inventario{% endblock %}
+{% block contenido %}
+<h1>Inventario</h1>
+<ul>
+    <li><a href="{% url 'inventario_lista' %}">Ver inventario</a></li>
+</ul>
+{% endblock %}

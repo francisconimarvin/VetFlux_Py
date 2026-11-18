@@ -1,0 +1,10 @@
+<!-- templates/agenda/index.html -->
+{% extends "base.html" %}
+{% block titulo %}Agenda{% endblock %}
+{% block contenido %}
+<h1>Agenda</h1>
+<ul>
+    <li><a href="{% url 'agenda_lista' %}">Ver mis citas</a></li>
+    <li><a href="{% url 'agenda_crear' %}">Nueva cita</a></li>
+</ul>
+{% endblock %}

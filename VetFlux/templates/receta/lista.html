@@ -1,0 +1,18 @@
+<!-- templates/receta/lista.html -->
+{% extends "base.html" %}
+{% block titulo %}Mis recetas{% endblock %}
+{% block contenido %}
+<h1>Mis recetas</h1>
+<p><a href="{% url 'receta_crear' %}">[ Nueva ]</a></p>
+<ul>
+    {% for r in recetas %}
+    <li>
+        {{ r.paciente_fk.nombre }}: {{ r.medicamento_fk.nombre }} - {{ r.dosis }}
+        <a href="{% url 'receta_editar' r.pk %}">[ editar ]</a>
+        <a href="{% url 'receta_eliminar' r.pk %}">[ eliminar ]</a>
+    </li>
+    {% empty %}
+    <li>No tienes recetas registradas.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

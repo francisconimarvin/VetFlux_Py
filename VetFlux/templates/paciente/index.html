@@ -1,0 +1,10 @@
+<!-- templates/paciente/index.html -->
+{% extends "base.html" %}
+{% block titulo %}Paciente{% endblock %}
+{% block contenido %}
+<h1>Paciente</h1>
+<ul>
+    <li><a href="{% url 'paciente_lista' %}">Ver mis pacientes</a></li>
+    <li><a href="{% url 'paciente_crear' %}">Crear paciente</a></li>
+</ul>
+{% endblock %}

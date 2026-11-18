@@ -1,0 +1,12 @@
+<!-- templates/inventario/form.html -->
+{% extends "base.html" %}
+{% block titulo %}Editar inventario{% endblock %}
+{% block contenido %}
+<h1>{{ item.instrumento_fk.nombre }}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">[ Guardar ]</button>
+    <a href="{% url 'inventario_lista' %}">[ Cancelar ]</a>
+</form>
+{% endblock %}

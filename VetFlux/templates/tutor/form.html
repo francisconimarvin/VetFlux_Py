@@ -1,0 +1,11 @@
+<!-- templates/tutor/form.html -->
+{% extends "base.html" %}
+{% block titulo %}Tutor{% endblock %}
+{% block contenido %}
+<h1>Formulario de tutor</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">[ Guardar ]</button>
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+<!-- templates/paciente/lista.html -->
+{% extends "base.html" %}
+{% block titulo %}Mis pacientes{% endblock %}
+{% block contenido %}
+<h1>Mis pacientes</h1>
+<p><a href="{% url 'paciente_crear' %}">[ Nuevo ]</a></p>
+<ul>
+    {% for p in pacientes %}
+    <li>
+        {{ p.nombre }} ({{ p.especie }})
+        <a href="{% url 'paciente_editar' p.pk %}">[ editar ]</a>
+        <a href="{% url 'paciente_eliminar' p.pk %}">[ eliminar ]</a>
+    </li>
+    {% empty %}
+    <li>No tienes pacientes registrados.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

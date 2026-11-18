@@ -1,0 +1,10 @@
+<!-- templates/receta/index.html -->
+{% extends "base.html" %}
+{% block titulo %}Recetas{% endblock %}
+{% block contenido %}
+<h1>Recetas</h1>
+<ul>
+    <li><a href="{% url 'receta_lista' %}">Ver mis recetas</a></li>
+    <li><a href="{% url 'receta_crear' %}">Nueva receta</a></li>
+</ul>
+{% endblock %}

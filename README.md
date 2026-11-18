@@ -13,4 +13,5 @@
 - Python 3.14.8
 - Django 5.2.13
 - PostgreSQL 18
+- HTML/CSS
 

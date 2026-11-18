@@ -1,0 +1,11 @@
+<!-- templates/agenda/confirmar_eliminar.html -->
+{% extends "base.html" %}
+{% block titulo %}Eliminar cita{% endblock %}
+{% block contenido %}
+<h1>¿Eliminar la cita de {{ cita.id_paciente_fk.nombre }}?</h1>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">[ Sí, eliminar ]</button>
+    <a href="{% url 'agenda_lista' %}">[ Cancelar ]</a>
+</form>
+{% endblock %}

@@ -1,0 +1,10 @@
+<!-- templates/ficha/index.html -->
+{% extends "base.html" %}
+{% block titulo %}Fichas médicas{% endblock %}
+{% block contenido %}
+<h1>Fichas médicas</h1>
+<ul>
+    <li><a href="{% url 'ficha_lista' %}">Ver mis fichas</a></li>
+    <li><a href="{% url 'ficha_crear' %}">Nueva ficha</a></li>
+</ul>
+{% endblock %}

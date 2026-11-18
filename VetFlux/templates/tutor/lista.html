@@ -1,0 +1,18 @@
+<!-- templates/tutor/lista.html -->
+{% extends "base.html" %}
+{% block titulo %}Mis tutores{% endblock %}
+{% block contenido %}
+<h1>Mis tutores</h1>
+<p><a href="{% url 'tutor_crear' %}">[ Nuevo ]</a></p>
+<ul>
+    {% for t in tutores %}
+    <li>
+        {{ t.nombre }} ({{ t.rut }})
+        <a href="{% url 'tutor_editar' t.pk %}">[ editar ]</a>
+        <a href="{% url 'tutor_eliminar' t.pk %}">[ eliminar ]</a>
+    </li>
+    {% empty %}
+    <li>No tienes tutores registrados.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
