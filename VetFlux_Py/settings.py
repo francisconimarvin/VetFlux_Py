@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-!5h!)@hbfom#%rc8=@gzi9qon*zc7mm(jm5gxdi0-2g%^ddp1w
 DEBUG = True
 
 ALLOWED_HOSTS = [
+        '127.0.0.1',
         '13.184.82.254',
         'vetflux.cl'
         ]

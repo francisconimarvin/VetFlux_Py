@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VetFlux</title>
+    <style>
+        body {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            background: #fff;
+            color: #000;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .layout {
+            flex: 1;
+            display: flex;
+        }
+
+        aside {
+            width: 200px;
+            border-right: 1px solid #000;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            box-sizing: border-box;
+        }
+
+        aside h1 {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+        }
+
+        aside a {
+            color: #0000ee;
+            text-decoration: underline;
+        }
+
+        aside a:visited {
+            color: #551a8b;
+        }
+
+        aside a:hover {
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .entrar {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px 30px;
+            max-width: 720px;
+        }
+
+        h1 {
+            font-size: 22px;
+            margin: 0 0 6px 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin: 30px 0 10px 0;
+            border-bottom: 1px solid #000;
+            padding-bottom: 4px;
+        }
+
+        p,
+        li {
+            line-height: 1.5;
+        }
+
+        ol,
+        ul {
+            padding-left: 22px;
+        }
+
+        .lema {
+            margin: 0 0 20px 0;
+        }
+
+        .pie {
+            border-top: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .layout {
+                flex-direction: column;
+            }
+
+            aside {
+                width: auto;
+                border-right: none;
+                border-bottom: 1px solid #000;
+            }
+
+            aside nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .entrar {
+                margin-top: 0;
+            }
+
+            main {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="layout">
+        <aside>
+            <h1>VetFlux</h1>
+            <nav>
+                <a href="#descripcion">Descripción</a>
+                <a href="#modulos">Módulos</a>
+                <a href="#manual">Manual</a>
+                <a href="#repositorio">Repositorio</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <a class="entrar" href="{% url 'login' %}">[ ENTRAR ]</a>
+        </aside>
+
+        <main>
+            <h1 id="descripcion">VetFlux</h1>
+            <p class="lema">Sistema médico veterinario para doctores independientes.</p>
+
+            <p>
+                VetFlux está pensado para el veterinario que trabaja por su cuenta, sobre todo
+                el que atiende a domicilio. Reúne en un solo lugar sus pacientes, tutores,
+                inventario, fichas y recetas, sin la complejidad de un sistema de clínica.
+            </p>
+            <p>
+                Cada doctor ve únicamente sus propios datos. Lo que registra en su cuenta
+                no es visible para nadie más.
+            </p>
+
+            <h2 id="modulos">Módulos</h2>
+            <ul>
+                <li>Pacientes: ficha básica de cada animal y su tutor.</li>
+                <li>Tutores: datos de contacto y domicilio.</li>
+                <li>Agenda: citas con fecha y hora.</li>
+                <li>Inventario: cantidad de cada instrumento que tienes disponible.</li>
+                <li>Fichas médicas: registro de atenciones por paciente.</li>
+                <li>Recetas: medicamentos y dosis indicadas a cada paciente.</li>
+            </ul>
+
+            <h2 id="manual">Manual rápido</h2>
+            <ol>
+                <li>Ingresa con tu usuario y contraseña desde [ ENTRAR ].</li>
+                <li>Registra primero a tus tutores, y luego a sus pacientes.</li>
+                <li>Agenda tus citas y registra las fichas después de cada atención.</li>
+                <li>Mantén tu inventario al día y emite recetas desde la sección correspondiente.</li>
+            </ol>
+            <p>Desde el menú lateral puedes moverte entre secciones.
+                <br><br> El botón [ Salir ] cierra tu sesión.
+            </p>
+
+            <h2 id="repositorio">Repositorio</h2>
+            <p>
+                El código es abierto y está disponible en
+                <a href="https://github.com/francisconimarvin/VetFlux_Py">github.com/francisconimarvin/VetFlux_Py</a>.
+                Se distribuye bajo la licencia GNU General Public License v3.0, sin embargo, la aplicación web es
+                propiedad de Fluxware ®, 2026.
+            </p>
+
+            <h2 id="contacto">Contacto</h2>
+            <p>
+                Para crear tu cuenta, consultas, sugerencias o reportes de errores:
+                <a href="mailto:marvinfrancisconi@proton.me">marvinfrancisconi@proton.me</a>
+            </p>
+        </main>
+    </div>
+
+    <footer class="pie">® Fluxware, 2026. Author: <a href="https://marvinfrancisconi.com">Marvin Francisconi</a>
+    </footer>
+
+</body>
+
+</html>

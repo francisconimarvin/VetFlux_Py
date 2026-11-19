@@ -24,6 +24,8 @@ from .forms import (
 from django.contrib.auth.decorators import login_required
 
 
+def landing(request):
+    return render(request, 'landing.html')
 
 @never_cache
 def login_view(request):
