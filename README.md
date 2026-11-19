@@ -14,4 +14,6 @@
 - Django 5.2.13
 - PostgreSQL 18
 - HTML/CSS
+- Amazon Web Service EC2
+- Cloudflare
 
