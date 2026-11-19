@@ -110,7 +110,6 @@ class Doctor(models.Model):
 
 
 class FichaMedica(models.Model):
-    fecha_ficha = models.DateTimeField()
     titulo = models.CharField(max_length=100)
     descripcion = models.TextField()
     id_paciente_fk = models.ForeignKey('Paciente', models.DO_NOTHING, db_column='id_paciente_fk')

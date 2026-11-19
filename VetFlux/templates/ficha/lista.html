@@ -7,7 +7,7 @@
 <ul>
     {% for f in fichas %}
     <li>
-        {{ f.fecha_ficha|date:"d/m/Y" }} - {{ f.titulo }} ({{ f.id_paciente_fk.nombre }})
+        {{ f.titulo }} ({{ f.id_paciente_fk.nombre }})
         <a href="{% url 'ficha_editar' f.pk %}">[ editar ]</a>
         <a href="{% url 'ficha_eliminar' f.pk %}">[ eliminar ]</a>
     </li>

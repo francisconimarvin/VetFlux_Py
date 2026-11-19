@@ -263,7 +263,7 @@ def ficha_lista(request):
     doctor = request.user.doctor
     fichas = (FichaMedica.objects.filter(id_paciente_fk__doctor_fk=doctor)
               .select_related('id_paciente_fk')
-              .order_by('-fecha_ficha'))
+              .order_by('-id'))
     return render(request, 'ficha/lista.html', {'fichas': fichas})
 
 @never_cache
@@ -274,7 +274,6 @@ def ficha_crear(request):
         form = FichaMedicaForm(request.POST, doctor=doctor)
         if form.is_valid():
             ficha = form.save(commit=False)
-            ficha.fecha_ficha = timezone.now()
             ficha.save()
             return redirect('ficha_lista')
     else:
